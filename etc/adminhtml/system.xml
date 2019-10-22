@@ -26,6 +26,9 @@
                 <field id="usps" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="0" canRestore="1">
                     <label>United States Postal Service</label>
                 </field>
+                <field id="royalmail" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="0" canRestore="1">
+                    <label>Royalmail royalmail.com</label>
+                </field>
             </group>
         </section>
     </system>

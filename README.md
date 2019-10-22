@@ -26,7 +26,7 @@ Magento CE(EE) 2.0.x, 2.1.x, 2.2.x, 2.3.x
 2. Enter following commands to install module:
 
     ```bash
-    composer require faonni/module-tracking-link
+    composer require coresh/m2.TrackingLink
     ```
    Wait while dependencies are updated.
 

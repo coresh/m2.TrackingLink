@@ -67,11 +67,37 @@ class Track extends Template
      */
     public function getTrackingUrl($track)
     {
-        $url = $this->helper->getCarrierUrl(
-            $track->getCarrierCode(),
-            (string)$track->getStoreId()
-        );
-        return $url ? str_replace('{{number}}', $track->getNumber(), $url) : null;
+        $carrierCode = $track->getCarrierCode();
+
+        $trackingUrl = null;
+
+        if (preg_match('/royalmail/i', $carrierCode)) {
+            $trackingUrl = $this->helper->getCarrierUrl('royalmail', (string)$track->getStoreId());
+        }
+
+        else if (preg_match('/dhl/i', $carrierCode)) {
+            $trackingUrl = $this->helper->getCarrierUrl('dhl', (string)$track->getStoreId());
+        }
+
+        else if (preg_match('/fedex/i', $carrierCode)) {
+            $trackingUrl = $this->helper->getCarrierUrl('fedex', (string)$track->getStoreId());
+        }
+
+        else if (preg_match('/dpd/i', $carrierCode)) {
+            $trackingUrl = $this->helper->getCarrierUrl('dpd', (string)$track->getStoreId());
+        }
+
+        else if (preg_match('/usps/i', $carrierCode)) {
+            $trackingUrl = $this->helper->getCarrierUrl('usps', (string)$track->getStoreId());
+        }
+
+        else if (preg_match('/ups/i', $carrierCode)) {
+            $trackingUrl = $this->helper->getCarrierUrl('ups', (string)$track->getStoreId());
+        }
+
+        return ($trackingUrl === null)
+            ? null
+            : preg_replace("/\{\{number\}\}/", $track->getNumber(), $trackingUrl);
     }
 
     /**
