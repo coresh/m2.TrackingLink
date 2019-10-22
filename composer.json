@@ -1,5 +1,5 @@
 {
-    "name": "coresh/m2.TrackingLink",
+    "name": "coresh/m2.trackinglink",
     "description": "Extension add Tracking Url in Shipment Email.",
     "type": "magento2-module",
     "version": "2.0.9",
