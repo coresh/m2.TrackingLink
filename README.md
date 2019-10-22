@@ -75,7 +75,7 @@ This works only with modules defined as Composer packages.
 2. Enter following commands to remove:
 
     ```bash
-    composer remove faonni/module-tracking-link
+    composer remove coresh/m2.trackinglink
     ```
 
 ### Completion of uninstall
