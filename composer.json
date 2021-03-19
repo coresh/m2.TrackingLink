@@ -10,9 +10,6 @@
     "license": [
         "OSL-3.0"
     ],
-    "require": {
-        "magento/module-email": "100.0.*|100.1.*|100.2.*|101.0.*"
-    },
     "autoload": {
         "files": [
             "registration.php"
